@@ -1,0 +1,24 @@
+ALGORITHM paragraphe
+VAR
+paragphe : STRING := "je suis imen rahal."; 
+longueur,mot,voyelle: INTEGER;
+c : INTEGER;
+BEGIN
+
+c:=0;
+voyelle:=0;
+longueur:=1;
+mot:=1; 
+    WHILE (paragphe [c]<>".") DO
+       IF (paragphe [c] in ["a","e","i","u","y","o"]) THEN
+           voyelle:=voyelle+1;
+       END_IF 
+       IF (paragphe[c]==" ") THEN
+           mot:= mot+1;
+       END_IF
+       longueur:=longueur+1;
+    END_WHILE
+write ("le longueur de paragraphe ", longueur);
+write ("le nombre des mots dans la paragraphe", mot); 
+write ("le nombre des voyelles dans la paragraphe", voyelle); 
+END
